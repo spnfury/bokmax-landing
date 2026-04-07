@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import heroMockup from '../../assets/hero-mockup.png'
+import heroGuy from '../../assets/hero-guy-mobile.png'
 
 function HeroV2() {
   return (
@@ -113,10 +113,16 @@ function HeroV2() {
               repeat: Infinity, 
               ease: "easeInOut" 
             }}
-            src={heroMockup} 
-            alt="Bokmax App Preview" 
+            src={heroGuy} 
+            alt="Bokmax App Experience" 
             className="hero-mockup-img"
-            style={{ maxWidth: '100%', height: 'auto', width: '420px' }}
+            style={{ 
+              maxWidth: '100%', 
+              height: 'auto', 
+              width: '400px',
+              borderRadius: '32px',
+              boxShadow: '0 30px 60px rgba(2, 8, 51, 0.15)'
+            }}
           />
         </motion.div>
       </div>

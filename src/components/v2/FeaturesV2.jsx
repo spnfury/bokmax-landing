@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { TrendingUp, ShieldCheck } from 'lucide-react'
-import barberImage from '../../assets/barber_shop_premium.png'
+import heroGuy from '../../assets/hero-guy-mobile.png'
 
 function FeaturesV2() {
   return (
@@ -15,8 +15,8 @@ function FeaturesV2() {
           style={{ position: 'relative' }}
         >
           <img 
-            src={barberImage} 
-            alt="Premium Barber Shop" 
+            src={heroGuy} 
+            alt="Barber using Bokmax" 
             style={{ 
               borderRadius: '24px', 
               boxShadow: '0 20px 50px rgba(2, 8, 51, 0.1)',

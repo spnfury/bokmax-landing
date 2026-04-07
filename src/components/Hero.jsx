@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import heroMockup from '../assets/hero-mockup.png'
+import heroGuy from '../assets/hero-guy-mobile.png'
 
 function Hero() {
   return (
@@ -27,7 +27,7 @@ function Hero() {
             fontSize: '1.1rem', 
             color: 'var(--text-muted)', 
             maxWidth: '500px', 
-            marginBottom: '2.5rem',
+            marginBottom: '2.5rem', 
             lineHeight: '1.8'
           }}>
             The elite referral network designed to carve the economic crux in the grooming industry. 
@@ -82,18 +82,23 @@ function Hero() {
         >
           <motion.img 
             animate={{ 
-              y: [0, -20, 0],
-              rotateZ: [0, 1, 0]
+              y: [0, -10, 0],
             }}
             transition={{ 
-              duration: 6, 
+              duration: 5, 
               repeat: Infinity, 
               ease: "easeInOut" 
             }}
-            src={heroMockup} 
-            alt="Bokmax App Preview" 
+            src={heroGuy} 
+            alt="Bokmax Lifestyle - Barber using the app" 
             className="hero-mockup-img"
-            style={{ maxWidth: '100%', height: 'auto', width: '450px' }}
+            style={{ 
+              maxWidth: '100%', 
+              height: 'auto', 
+              width: '400px',
+              borderRadius: '24px',
+              boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+            }}
           />
         </motion.div>
       </div>
