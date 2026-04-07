@@ -1,22 +1,24 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import WhatIs from '../components/WhatIs'
+import FeaturesGallery from '../components/FeaturesGallery'
 import HowItWorks from '../components/HowItWorks'
 import ReferralSystem from '../components/ReferralSystem'
-import DownloadCTA from '../components/DownloadCTA'
+import Pricing from '../components/Pricing'
+import BrandStory from '../components/BrandStory'
 import Footer from '../components/Footer'
 
 function LandingPage() {
   return (
-    <>
+    <div className="landing-page">
       <Navbar />
       <Hero />
-      <WhatIs />
+      <FeaturesGallery />
       <HowItWorks />
       <ReferralSystem />
-      <DownloadCTA />
+      <Pricing />
+      <BrandStory />
       <Footer />
-    </>
+    </div>
   )
 }
 

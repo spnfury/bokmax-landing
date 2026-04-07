@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import heroMockup from '../assets/hero-mockup.png'
+import heroMockup from '../../assets/hero-mockup.png'
 
-function Hero() {
+function HeroV2() {
   return (
-    <section className="hero" id="hero" style={{ background: 'linear-gradient(180deg, #f8faff 0%, #ffffff 100%)' }}>
+    <section className="hero v2-theme" id="hero" style={{ background: 'linear-gradient(180deg, #f8faff 0%, #ffffff 100%)', padding: '160px 0 100px' }}>
       <div className="container grid-2">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
@@ -11,27 +11,38 @@ function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="hero-content"
         >
-          <div className="badge" style={{ marginBottom: '1.5rem' }}>
+          <div className="badge" style={{ 
+            marginBottom: '1.5rem', 
+            background: 'var(--v2-blue)', 
+            color: 'white',
+            fontFamily: "'Lexend Giga', sans-serif",
+            fontSize: '0.65rem'
+          }}>
             The Elite Referral Network
           </div>
           <h1 style={{ 
-            fontSize: 'clamp(3rem, 6vw, 4.5rem)', 
-            marginBottom: '1rem',
-            color: 'var(--primary)'
+            fontSize: 'clamp(2.5rem, 5vw, 4rem)', 
+            marginBottom: '1.5rem',
+            color: 'var(--v2-navy)',
+            fontWeight: '800',
+            lineHeight: '1.1',
+            textTransform: 'uppercase'
           }}>
             BOKMAX: <br />
-            <span className="text-gradient">Your Story</span> <br />
-            Your Style
+            <span style={{ color: 'var(--v2-red)' }}>Your Story</span> <br />
+            <span style={{ color: 'var(--v2-blue)' }}>Your Style</span>
           </h1>
           <p style={{ 
-            fontSize: '1.1rem', 
+            fontSize: '1rem', 
             color: 'var(--text-muted)', 
             maxWidth: '500px', 
             marginBottom: '2.5rem',
-            lineHeight: '1.8'
+            lineHeight: '1.7',
+            fontWeight: '400',
+            fontFamily: "'Inter', sans-serif"
           }}>
             The elite referral network designed to carve the economic crux in the grooming industry. 
-            Connecting owners, barbers, and customers through a seamless ecosystem.
+            Connecting owners, barbers, and customers through a seamless ecosystem built on trust and style.
           </p>
           
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -40,6 +51,7 @@ function Hero() {
               whileTap={{ scale: 0.95 }}
               href="#download" 
               className="btn btn-primary"
+              style={{ padding: '14px 32px', fontSize: '0.8rem', letterSpacing: '0.02em', textTransform: 'uppercase' }}
             >
               Get Started Now
             </motion.a>
@@ -48,6 +60,7 @@ function Hero() {
               whileTap={{ scale: 0.95 }}
               href="#how-it-works" 
               className="btn btn-outline"
+              style={{ padding: '14px 32px', fontSize: '0.8rem', letterSpacing: '0.02em', textTransform: 'uppercase', borderColor: 'var(--v2-blue)', color: 'var(--v2-blue)' }}
             >
               How It Works
             </motion.a>
@@ -63,12 +76,13 @@ function Hero() {
                   background: `url(https://i.pravatar.cc/100?img=${i+10})`,
                   backgroundSize: 'cover',
                   border: '3px solid white',
-                  marginLeft: i === 1 ? 0 : '-15px'
+                  marginLeft: i === 1 ? 0 : '-15px',
+                  boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
                 }} />
               ))}
             </div>
-            <span style={{ fontSize: '0.9rem', fontWeight: '500', color: 'var(--text-muted)' }}>
-              Joined by <span style={{ color: 'var(--primary)', fontWeight: '700' }}>9,000+</span> professionals
+            <span style={{ fontSize: '0.8rem', fontWeight: '500', color: 'var(--text-muted)', fontFamily: "'Inter', sans-serif" }}>
+              Joined by <span style={{ color: 'var(--v2-navy)', fontWeight: '800' }}>9,000+</span> professionals
             </span>
           </div>
         </motion.div>
@@ -78,22 +92,31 @@ function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="hero-mockup-container"
-          style={{ display: 'flex', justifyContent: 'center' }}
+          style={{ display: 'flex', justifyContent: 'center', position: 'relative' }}
         >
+          {/* Decorative element */}
+          <div style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            background: 'radial-gradient(circle, rgba(32, 75, 180, 0.1) 0%, rgba(255, 255, 255, 0) 70%)',
+            zIndex: -1,
+            top: 0
+          }}></div>
+          
           <motion.img 
             animate={{ 
-              y: [0, -20, 0],
-              rotateZ: [0, 1, 0]
+              y: [0, -15, 0],
             }}
             transition={{ 
-              duration: 6, 
+              duration: 5, 
               repeat: Infinity, 
               ease: "easeInOut" 
             }}
             src={heroMockup} 
             alt="Bokmax App Preview" 
             className="hero-mockup-img"
-            style={{ maxWidth: '100%', height: 'auto', width: '450px' }}
+            style={{ maxWidth: '100%', height: 'auto', width: '420px' }}
           />
         </motion.div>
       </div>
@@ -101,4 +124,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default HeroV2

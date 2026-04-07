@@ -1,74 +1,81 @@
-import { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+import { UserPlus, Calendar, Share2 } from 'lucide-react'
+
+const steps = [
+  {
+    number: '01',
+    icon: <UserPlus size={32} />,
+    title: 'Create your profile',
+    description: 'Set up your professional identity or personal preferences in minutes. High-impact visuals meet intuitive setup.'
+  },
+  {
+    number: '02',
+    icon: <Calendar size={32} />,
+    title: 'Seamless booking',
+    description: 'Real-time availability and instant confirmations. No more back-and-forth, just premium service guarantee.'
+  },
+  {
+    number: '03',
+    icon: <Share2 size={32} />,
+    title: 'Refer & Earn',
+    description: 'Activate our unique referral engine. Earn passive income by growing the network you love.'
+  }
+]
 
 function HowItWorks() {
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    const elements = sectionRef.current?.querySelectorAll('.animate-on-scroll')
-    elements?.forEach((el, i) => {
-      el.style.transitionDelay = `${i * 0.15}s`
-      observer.observe(el)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
-  const steps = [
-    {
-      number: '01',
-      icon: '👤',
-      title: 'Create Your Profile',
-      description: 'Download the app and set up your profile in seconds. Whether you\'re a barbershop owner, barber, or customer — we\'ve got you covered.'
-    },
-    {
-      number: '02',
-      icon: '💈',
-      title: 'Find & Book',
-      description: 'Find your barbershop using geolocation and set up an appointment with your preferred professional, date, and time.'
-    },
-    {
-      number: '03',
-      icon: '🤝',
-      title: 'Refer & Earn',
-      description: 'If you enjoyed the service, refer the barbershop to your friends and start making money with every referral. Passive income, made simple.'
-    }
-  ]
-
   return (
-    <section className="section" id="how-it-works" ref={sectionRef}>
+    <section className="section" id="how-it-works" style={{ background: 'var(--bg-soft)' }}>
       <div className="container">
-        <div className="text-center animate-on-scroll">
-          <span className="section-label" style={{ justifyContent: 'center' }}>
-            <span className="section-label-line"></span>
-            How It Works
-            <span className="section-label-line"></span>
-          </span>
-          <h2 className="section-title">Three Simple Steps</h2>
-          <p className="section-subtitle mx-auto">
-            Getting started with Bokmax is easy. Download, book, and start earning 
-            — all from your phone.
-          </p>
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div className="badge" style={{ marginBottom: '1rem' }}>Process</div>
+          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'var(--primary)', marginBottom: '1rem' }}>
+            How BOKMAX Works
+          </h2>
+          <div style={{ width: '60px', height: '4px', background: 'var(--accent)', margin: '0 auto' }}></div>
         </div>
 
-        <div className="how-it-works-steps">
-          {steps.map((step) => (
-            <div className="step-card glass-card-premium animate-on-scroll" key={step.number}>
-              <div className="step-number">{step.number}</div>
-              <div className="step-icon">{step.icon}</div>
-              <h3 className="step-title">{step.title}</h3>
-              <p className="step-description">{step.description}</p>
-            </div>
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+          gap: '2.5rem' 
+        }}>
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="card"
+              style={{ textAlign: 'center', padding: '3rem 2rem' }}
+            >
+              <div style={{ 
+                width: '64px', 
+                height: '64px', 
+                background: 'var(--white)',
+                color: 'var(--accent)',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 2rem',
+                fontSize: '1.2rem',
+                fontWeight: '800',
+                boxShadow: 'var(--shadow-md)',
+                position: 'relative'
+              }}>
+                {step.number}
+              </div>
+              <div style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>
+                {step.icon}
+              </div>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--primary)' }}>
+                {step.title}
+              </h3>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.7' }}>
+                {step.description}
+              </p>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -44,6 +44,9 @@ function WhatIs() {
               created as a solution to address the economic crisis by streamlining 
               professionals' workflows and leveraging technology to prevent the loss of customers.
             </p>
+            <p style={{ fontWeight: 600, color: '#ffffff', opacity: 0.9, marginTop: '8px' }}>
+              Generating recurring and scalable passive income for barbershop owners, employees, and customers, turning service costs into profit opportunities and ensuring business growth.
+            </p>
 
             <div className="what-is-features">
               <div className="what-is-feature">
@@ -71,24 +74,24 @@ function WhatIs() {
           </div>
 
           <div className="what-is-visual animate-on-scroll">
-            <div className="what-is-card glass-card-premium">
+            <div className="what-is-card">
               <div className="what-is-stats">
-                <div className="stat-item glass-card-premium">
+                <div className="stat-item">
                   <div className="stat-icon">✂️</div>
                   <div className="stat-value">3</div>
                   <div className="stat-label">User Types</div>
                 </div>
-                <div className="stat-item glass-card-premium">
+                <div className="stat-item">
                   <div className="stat-icon">📱</div>
                   <div className="stat-value">iOS & Android</div>
                   <div className="stat-label">Platforms</div>
                 </div>
-                <div className="stat-item glass-card-premium">
+                <div className="stat-item">
                   <div className="stat-icon">🔄</div>
                   <div className="stat-value">Recurring</div>
                   <div className="stat-label">Passive Income</div>
                 </div>
-                <div className="stat-item glass-card-premium">
+                <div className="stat-item">
                   <div className="stat-icon">🏆</div>
                   <div className="stat-value">Unique</div>
                   <div className="stat-label">Referral System</div>
