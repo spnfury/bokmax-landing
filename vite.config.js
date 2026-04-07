@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/bokmax-landing/",
+  base: process.env.VERCEL ? "/" : "/bokmax-landing/",
 })
