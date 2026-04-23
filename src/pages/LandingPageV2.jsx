@@ -3,7 +3,6 @@ import FeaturesV2 from '../components/v2/FeaturesV2'
 import HowItWorksV2 from '../components/v2/HowItWorksV2'
 import ReferralSystemV2 from '../components/v2/ReferralSystemV2'
 import BrandStoryV2 from '../components/v2/BrandStoryV2'
-import AppShowcase from '../components/v2/AppShowcase'
 import FooterV2 from '../components/v2/FooterV2'
 
 function LandingPageV2() {
@@ -14,7 +13,6 @@ function LandingPageV2() {
       <HowItWorksV2 />
       <ReferralSystemV2 />
       <BrandStoryV2 />
-      <AppShowcase />
       <FooterV2 />
     </div>
   )
