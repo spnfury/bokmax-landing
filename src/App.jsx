@@ -3,6 +3,7 @@ import LandingPage from './pages/LandingPage'
 import LandingPageV2 from './pages/LandingPageV2'
 import TermsOfUse from './pages/TermsOfUse'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import CookiesInfo from './pages/CookiesInfo'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/v2" element={<LandingPageV2 />} />
       <Route path="/terms" element={<TermsOfUse />} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/cookies" element={<CookiesInfo />} />
     </Routes>
   )
 }
