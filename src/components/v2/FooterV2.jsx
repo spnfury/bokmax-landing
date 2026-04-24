@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import LogoV2 from "./LogoV2";
+import footerLogo from "../../assets/footer-logo.png";
 
 function FooterV2() {
   const currentYear = new Date().getFullYear();
@@ -22,7 +22,11 @@ function FooterV2() {
         }}
       >
         <div style={{ gridColumn: "span 2" }}>
-          <LogoV2 variant="white" style={{ marginBottom: "2rem" }} />
+          <img
+            src={footerLogo}
+            alt="BOKMAX - Your Story Your Style"
+            style={{ height: "56px", width: "auto", display: "block", marginBottom: "2rem" }}
+          />
           <p
             style={{
               color: "rgba(255, 255, 255, 0.6)",
