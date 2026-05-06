@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Lexend+Giga:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Lexend+Giga:wght@100..900&display=swap");
 
 :root {
   /* Core Palette */
@@ -8,14 +8,14 @@
   --accent-light: #3b66cf;
   --danger: #e93221;
   --danger-light: #ff4d3d;
-  
+
   /* Neutral Colors */
   --white: #ffffff;
   --bg-soft: #f8faff;
   --text-main: #020833;
   --text-muted: rgba(2, 8, 51, 0.65);
   --border-light: rgba(2, 8, 51, 0.08);
-  
+
   /* Design Tokens */
   --container-max: 1280px;
   --header-height: 80px;
@@ -23,7 +23,7 @@
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-xl: 32px;
-  
+
   /* Shadows & Effects */
   --shadow-sm: 0 4px 12px rgba(2, 8, 51, 0.04);
   --shadow-md: 0 8px 24px rgba(2, 8, 51, 0.08);
@@ -41,17 +41,17 @@
 
 /* V2 Theme Scoping */
 .v2-theme {
-  font-family: 'Lexend Giga', sans-serif !important;
+  font-family: "Lexend Giga", sans-serif !important;
   color: var(--v2-navy);
 }
 
-.v2-theme h1, 
-.v2-theme h2, 
-.v2-theme h3, 
-.v2-theme h4, 
-.v2-theme h5, 
+.v2-theme h1,
+.v2-theme h2,
+.v2-theme h3,
+.v2-theme h4,
+.v2-theme h5,
 .v2-theme h6 {
-  font-family: 'Lexend Giga', sans-serif !important;
+  font-family: "Lexend Giga", sans-serif !important;
   text-transform: uppercase;
   letter-spacing: -0.02em;
 }
@@ -73,9 +73,10 @@
   background-color: var(--v2-blue);
 }
 
-
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -84,10 +85,15 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   background-color: var(--white);
   color: var(--text-main);
   line-height: 1.6;
@@ -95,8 +101,13 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Outfit", sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -179,7 +190,7 @@ ul {
   cursor: pointer;
   border: none;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 1rem;
 }
 
@@ -225,8 +236,13 @@ ul {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .glass-morphism {
@@ -263,7 +279,7 @@ ul {
 }
 
 .membership-card.featured::before {
-  content: 'POPULAR';
+  content: "POPULAR";
   position: absolute;
   top: 12px;
   right: -32px;

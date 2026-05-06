@@ -13,19 +13,29 @@ function FooterV2() {
         padding: "100px 0 40px",
       }}
     >
+      <style>{`
+        @media (min-width: 600px) {
+          .footer-grid { grid-template-columns: 2fr 1fr !important; }
+        }
+      `}</style>
       <div
-        className="container"
+        className="container footer-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-          gap: "4rem",
+          gridTemplateColumns: "1fr",
+          gap: "3rem",
         }}
       >
-        <div style={{ gridColumn: "span 2" }}>
+        <div>
           <img
             src={footerLogo}
             alt="BOKMAX - Your Story Your Style"
-            style={{ height: "56px", width: "auto", display: "block", marginBottom: "2rem" }}
+            style={{
+              height: "56px",
+              width: "auto",
+              display: "block",
+              marginBottom: "2rem",
+            }}
           />
           <p
             style={{
@@ -52,9 +62,18 @@ function FooterV2() {
             <a
               href="#"
               aria-label="Download on the App Store"
-              style={{ display: "inline-block", transition: "transform 0.2s, opacity 0.2s" }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.04)"; e.currentTarget.style.opacity = "0.9"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.opacity = "1"; }}
+              style={{
+                display: "inline-block",
+                transition: "transform 0.2s, opacity 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.04)";
+                e.currentTarget.style.opacity = "0.9";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.opacity = "1";
+              }}
             >
               <img
                 src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
@@ -66,14 +85,29 @@ function FooterV2() {
             <a
               href="#"
               aria-label="Get it on Google Play"
-              style={{ display: "inline-block", transition: "transform 0.2s, opacity 0.2s" }}
-              onMouseEnter={(e) => { e.currentTarget.style.transform = "scale(1.04)"; e.currentTarget.style.opacity = "0.9"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.opacity = "1"; }}
+              style={{
+                display: "inline-block",
+                transition: "transform 0.2s, opacity 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.04)";
+                e.currentTarget.style.opacity = "0.9";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.opacity = "1";
+              }}
             >
               <img
                 src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                 alt="Get it on Google Play"
-                style={{ height: "70px", width: "auto", display: "block", marginTop: "-9px", marginBottom: "-9px" }}
+                style={{
+                  height: "70px",
+                  width: "auto",
+                  display: "block",
+                  marginTop: "-9px",
+                  marginBottom: "-9px",
+                }}
               />
             </a>
           </div>
