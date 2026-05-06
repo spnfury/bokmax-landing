@@ -22,6 +22,8 @@ function FeaturesV2() {
             @media (max-width: 968px) {
               .feat-badge-left { left: 8px !important; }
               .feat-badge-right { right: 8px !important; }
+              .features-content { text-align: left !important; }
+              .features-visual { max-width: 420px; margin: 0 auto; width: 100%; }
             }
           `}</style>
           <img
